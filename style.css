@@ -1,6 +1,17 @@
 /* CSS Normalize */
 @import 'reset.css';
 
+
+img{
+    padding: 3px;
+}
+
+li{
+    padding: 3px;
+}
+ul {list-style: none;}
+
+
 /*
 align menu on top to the logo
 }*/
@@ -20,6 +31,7 @@ menu items displayed as a row
 
 .footer{
     display: flex;
+    flex-wrap: nowrap;
     background-color: beige;
 }
 
@@ -29,12 +41,27 @@ menu items displayed as a row
 
 .footer .social-menu{
     display: flex;
+/*     flex-wrap: nowrap;*/
+    background-color: aquamarine;
 }
 
 .newsletter{
-    background-color: darksalmon;
+    display: flex;
+    flex-direction: column;
+    border-style: dotted;
+    border-width: 3px;
 }
 
+.newsletter .newsletter-icon-text{
+    display: flex;
+    flex-direction: row;
+    
+}
+.newsletter .newsletter-form-button{
+    display: flex;
+    flex-direction: row;
+    
+}
 /*Hide icons on main menu on mobile view*/
 .icon{
     display: none;
@@ -55,20 +82,19 @@ menu items displayed as a row
 View #1*/
 @media all and (min-width:500px) {
   
-      .foodsense-nav {
+    .foodsense-nav {
     flex-direction: row;
     align-items: flex-start;
 }
 
     .article ul{
-    background-color: aqua;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     }
     
     .article ul li{
-        background: green;
-        flex-basis: 50%;
+        flex-basis: 40%;
     }
   .footer{
      justify-content: space-between;       
@@ -82,8 +108,7 @@ View #1*/
 @media all and (min-width:700px){
     
   .article ul{
-    background-color: pink;
-    flex-wrap: nowrap;
+   flex-wrap: nowrap;
     }
     
     .icon{
@@ -91,18 +116,20 @@ View #1*/
     }
     
     .footer{
-     justify-content: space-between;       
-        }
+        justify-content: space-between;      }
     
     .nav-menu li{
         display: flex;
         flex-direction: column-reverse;
-        background-color:orchid;
-        border: solid;
     }
     
     .foodsense-nav{
         justify-content: space-between;
+    }
+    
+    .newsletter{
+        flex-direction: row;
+        align-items: center;
     }
 
 }
@@ -117,6 +144,7 @@ View #1*/
         display: flex;
         justify-content: center;
         background-color: #60BEAE;
+        padding: 15px;
     }
       .nav-menu-main-banner ul li{
        flex-grow: 1;
@@ -124,6 +152,7 @@ View #1*/
 
     .foodsense-nav{
         flex-direction: column;
+        justify-content: flex-start;
     }
     .nav-menu{
         flex-direction: column;
@@ -140,8 +169,8 @@ View #1*/
     flex-wrap: nowrap;
     }
     .social-description {
-    background-color: lightcyan;
-    font-size: 12px;
+        background-color: lightcyan;
+        font-size: 12px;
     }
    .menu-tagline{
        display: none;
