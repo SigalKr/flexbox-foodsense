@@ -2,6 +2,9 @@
 @import 'reset.css';
 
 
+.icon{
+    width: 60px;
+}
 img{
     padding: 3px;
 }
@@ -9,9 +12,20 @@ img{
 li{
     padding: 3px;
 }
-ul {list-style: none;}
+ul {list-style: none;
+}
 
 
+
+.main-banner{ 
+	width: 500px ;
+    height: 248px ;
+    background-image: url(0219_foodsense.jpg); 
+    background-repeat: no-repeat;
+    background-position: 50% 50% ; 
+    background-size: cover; 
+    background-color:#ff0000;
+}
 /*
 align menu on top to the logo
 }*/
@@ -176,6 +190,12 @@ View #1*/
        display: none;
             
         }
+    
+    
+ .main-banner{ 
+    
+	width: 896px ;
+    height: 445px ;}
 }
 
 /*View #4*/
